@@ -580,6 +580,7 @@ x->h->m, we can first train a self-transform layer from x->h->x, then
 train a self-transform layer from h->m->h, and combine all the 
 pre-trained layers together with other layers to build up the final 
 model. The advantage of using this model is that it can be modularized. 
+					<br><br>
 The implementation we did was to first build up a transformer from 
 x(520 dimensions)->256->128->64->128->256->x. Later we pop up the 
 reverse layers and stacked to fully connected layer to generate the 
