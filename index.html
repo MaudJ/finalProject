@@ -480,13 +480,15 @@ classification tasks and use error rate as evaluation metrics.
 		<div class='scroll__text_sd_chart2'>
 			<div class='step' id="sd_chart_2">
 				<!-- <h3>Both Supply and Demand dropped dramatically after 911 and slowly rebounded.</h3> -->
-				<p>A feedforward neural network is an artificial neural network wherein 
-connections between the nodes do not form a cycle. As such, it is 
-different from recurrent neural networks. The feedforward neural 
-network was the first and simplest type of artificial neural network 
-devised. In this network, the information moves in only one direction, 
-forward, from the input nodes, through the hidden nodes (if any) and 
-to the output nodes. There are no cycles or loops in the network.
+				<p>The simplest feed forward neural network is the fully connected neural 
+network. Each signal we have in the input layer is connect to all the 
+neurons in the hidden layer and the output of the hidden layer will go 
+through a non-linear activation function and the output layer is a 
+summarization of the hidden layer or softmax layer which can predict 
+the probability of each class.
+<br><br>
+The dimension of our FFN's hidden layer is 128.
+
 
                			</p>
 			</div>
@@ -572,11 +574,17 @@ performance when k=5.
 		<div class='scroll__text_airportDivert' >
 			<div class='step' id="airport_divert_5" >
 				<!-- <h3>Larger airport were easier targets for terrorist</h3> -->
-				<p>A stacked autoencoder is a neural network consisting of multiple layers 
-of sparse autoencoders in which the outputs of each layer is wired to 
-the inputs of the successive layer. Autoencoders can be "stacked" in a 
-greedy layerwise fashion for pretraining (initializing) the weights of a 
-deep network.
+				<p>The stacked autoencoder is a deep learning model which consists of 
+sevarl sparse autoencoder layer. In order to have a transformation from 
+x->h->m, we can first train a self-transform layer from x->h->x, then 
+train a self-transform layer from h->m->h, and combine all the 
+pre-trained layers together with other layers to build up the final 
+model. The advantage of using this model is that it can be modularized. 
+The implementation we did was to first build up a transformer from 
+x(520 dimensions)->256->128->64->128->256->x. Later we pop up the 
+reverse layers and stacked to fully connected layer to generate the 
+result we want.
+
  </p>
 			</div>
 <!-- 			<div class='step' id="airport_divert_2">
