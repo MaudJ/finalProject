@@ -444,13 +444,14 @@ classification tasks and use error rate as evaluation metrics.
                     attacks, including active shooters, luggage filled with explosives,
                     weaponized drones, and vehicle ramming, than small and medium-sized airports. </p>
  -->
-                   <p> Support-vector machines (SVMs, also support-vector networks) are 
-supervised learning models with associated learning algorithms that 
-analyze data used for classification and regression analysis. Given a set 
-of training examples, each marked as belonging to one or the other of 
-two categories, an SVM training algorithm builds a model that assigns 
-new examples to one category or the other, making it a non-
-probabilistic binary linear classifier.</p>
+                   <p> SVM, or SVR(supporting vector regression) and SVC(supporting vector 
+			classification) in our project, is a well definition supervised method 
+			which can seperate the examples based on their groups by a certain 
+			shape hyper plane defined by the kernel function we chose. The key 
+			idea of support vector is to create a hyper plane which can minimize 
+			the error while maximize the margin. So it naturally tolerates more 
+			disturbance near the marginal region.
+			</p>
 
 
 			</div>
@@ -508,16 +509,12 @@ to the output nodes. There are no cycles or loops in the network.
 		<div class='scroll__text_airportDivert' >
 			<div class='step' id="airport_divert_3" >
 <!-- 				<h3>Larger airport were easier targets for terrorist</h3>
- -->				<p>In computer science, Decision tree learning uses a decision tree (as a 
-predictive model) to go from observations about an item (represented 
-in the branches) to conclusions about the item's target value 
-(represented in the leaves). It is one of the predictive modeling 
-approaches used in statistics, data mining and machine learning. Tree 
-models where the target variable can take a discrete set of values are 
-called classification trees; in these tree structures, leaves represent 
-class labels and branches represent conjunctions of features that lead 
-to those class labels. Decision trees where the target variable can take 
-continuous values (typically real numbers) are called regression trees.
+ -->				<p>Decision Trees (DTs) are a non-parametric supervised learning method 
+used for classification and regression. The goal is to create a model that 
+predicts the value of a target variable by learning simple decision rules 
+inferred from the data features. We use DecisionTreeRegressor() for 
+longitude and latitude prediction and DecisionTreeClassifier() for 
+building and floor prediction.
  </p>
 			</div>
 <!-- 			<div class='step' id="airport_divert_2">
@@ -547,11 +544,13 @@ continuous values (typically real numbers) are called regression trees.
 				<!-- <h3>Both Supply and Demand dropped dramatically after 911 and slowly rebounded.</h3> -->
 				<p>K-Nearest Neighbors (KNN) is one of the simplest algorithms used in 
 Machine Learning for regression and classification problem. KNN 
-algorithms use a data and classify new data points based on a similarity 
-measures (e.g. distance function). Classification is done by a majority 
-vote to its neighbors. The data is assigned to the class which has the 
-most nearest neighbors. As you increase the number of nearest 
-neighbors, the value of k, accuracy might increase.
+algorithms classify new data points based on a similarity measure like 
+distance function. Classification is done by a majority vote to its 
+neighbors, which means the data is assigned to the class which has the 
+nearest neighbors. 
+					<br><br>
+In our algorithm, we chose k from 1 to 10 and the result had best 
+performance when k=5.
 
                			</p>
 			</div>
