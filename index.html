@@ -394,11 +394,20 @@ In this project, we will develop a indoor positioning system based on the UJIInd
 
 		<div class="scroll__text_flight">
 			<div class='step' id="flight_1">
-				<h3>Massive flight cancellation during following days</h3>
-				<p>The day of 911, all US domestic flights were cancelled or diverted.
-                    Civilian air traffic would not resume for 3 days. A total of about 4,000
-                    flights were asked to grounded immediately. All airports were required to
-                    take in as many planes as possible.
+				<p>As shown in the table, we implemented 5 algorithms: k nearest 
+neighbors, decision tree, support vector machine, feed-forward neural 
+network and stacked autoencoder.
+<br><br>
+The algorithms are competing against each other on four tasks: 
+longitude prediction, latitude prediction, building prediction and floor 
+prediction. The target of the former two tasks is to generate a real 
+number to represent the location of the user. The target of the later 
+two tasks is to generate a integer which is a categorical label of the 
+
+location. Thus, we treat the first two tasks as regression tasks and use 
+root-mean-square error as evaluation. And treat the other two tasks as 
+classification tasks and use error rate as evaluation metrics.
+
                 </p>
 			</div>
 		</div>
